@@ -5,6 +5,7 @@
 package com.mth.configs;
 
 import java.util.Properties;
+import javax.sql.DataSource;
 import static org.hibernate.cfg.JdbcSettings.DIALECT;
 import static org.hibernate.cfg.JdbcSettings.SHOW_SQL;
 import org.springframework.beans.factory.annotation.Autowired;

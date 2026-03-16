@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package com.mth.repositories;
+package com.mth.services;
 
 import com.mth.pojo.Category;
 import java.util.List;
 
 /**
  *
- * @author lenovo
+ * @author thanhai7425
  */
-public interface CategoryRepository {
+public interface CategorySevice {
     List<Category> getCates();
 }

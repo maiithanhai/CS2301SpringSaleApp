@@ -6,6 +6,7 @@ package com.mth.configs;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -18,10 +19,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 //Gom nhat cac hat dau
 @ComponentScan(
         basePackages = {
-            "com.mth.controllers"
+            "com.mth.controllers",
+            "com.mth.repositories",
+            "com.mth.services",
         }
 )
 @EnableWebMvc
+@EnableTransactionManagement
 public class WebAppContextConfigs implements WebMvcConfigurer{
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
