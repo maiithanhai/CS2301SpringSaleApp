@@ -6,17 +6,17 @@ package com.mth.services.impl;
 
 import com.mth.pojo.Category;
 import com.mth.repositories.CategoryRepository;
-import com.mth.services.CategorySevice;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.mth.services.CategoryService;
 
 /**
  *
  * @author thanhai7425
  */
 @Service
-public class CategoryServiceImpl implements CategorySevice{
+public class CategoryServiceImpl implements CategoryService{
     @Autowired
     private CategoryRepository cateRepo;
     @Override

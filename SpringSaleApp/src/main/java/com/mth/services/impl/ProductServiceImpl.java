@@ -8,6 +8,7 @@ import com.mth.pojo.Product;
 import com.mth.repositories.ProductRepository;
 import com.mth.services.ProductService;
 import java.util.List;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +21,14 @@ public class ProductServiceImpl implements ProductService{
     @Autowired
     private ProductRepository prodRepo;
     @Override
-    public List<Product> getProds(String cateId) {
-        return this.prodRepo.getProds(cateId);
+    public List<Product> getProds(Map<String,String> params) {
+        return this.prodRepo.getProds(params);
+        // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void addOrUpdateProduct(Product p) {
+        this.prodRepo.addOrUpdateProduct(p);
         // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
