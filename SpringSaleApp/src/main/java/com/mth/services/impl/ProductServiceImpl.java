@@ -24,4 +24,9 @@ public class ProductServiceImpl implements ProductService{
         return this.prodRepo.getProds(cateId);
         // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    @Override
+    public void addOrUpdateProduct(Product p) {
+        this.prodRepo.addOrUpdateProduct(p); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

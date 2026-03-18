@@ -13,4 +13,5 @@ import java.util.List;
  */
 public interface ProductService {
     List<Product> getProds(String cateId);
+    void addOrUpdateProduct(Product p);
 }
