@@ -30,7 +30,7 @@ public class ProductRepositoryImpl implements ProductRepository{
         // Nếu người dùng có click vào category (cateId != null)
         if (cateId != null && !cateId.isEmpty()) {
             // LƯU Ý: Chữ 'category' ở đây phải giống hệt tên biến @ManyToOne trong file POJO Product của bạn
-            q = session.createQuery("FROM Product p WHERE p.categoryId.id c= :id",Product.class);
+            q = session.createQuery("FROM Product p WHERE p.categoryId.id   = :id",Product.class);
             q.setParameter("id", Integer.parseInt(cateId));
         }
         return q.getResultList();
